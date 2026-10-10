@@ -21,13 +21,13 @@
 Add genuine screenshots captured from your own build to the `screenshots/` directory using these filenames. GitHub will display them automatically once the files are committed.
 
 ### 1. Application overview
-![RogueByte Stego Pro application overview](screenshots/screenshot1.png)
+![RogueByte Stego Pro application overview](screenshot1.png)
 
 ### 2. Image inspection and forensic output
-![RogueByte Stego Pro image inspection](screenshots/screenshot2.png)
+![RogueByte Stego Pro image inspection](screenshot2.png)
 
 ### 3. Embedding, extraction, and verification
-![RogueByte Stego Pro CLI workflow](screenshots/screenshot3.png)
+![RogueByte Stego Pro CLI workflow](screenshot3.png)
 
 If the images do not appear, check that the files exist at these exact paths and are committed to the repository. These Markdown references do not create the image files for you.
 
