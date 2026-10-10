@@ -21,10 +21,10 @@
 Add genuine screenshots captured from your own build to the `screenshots/` directory using these filenames. GitHub will display them automatically once the files are committed.
 
 ### 1. Application overview
-![RogueByte Stego Pro application overview](screenshot1.png)
+![RogueByte Stego Pro application overview](screenshot2.png)
 
 ### 2. Image inspection and forensic output
-![RogueByte Stego Pro image inspection](screenshot2.png)
+![RogueByte Stego Pro image inspection](screenshot1.png)
 
 ### 3. Embedding, extraction, and verification
 ![RogueByte Stego Pro CLI workflow](screenshot3.png)
