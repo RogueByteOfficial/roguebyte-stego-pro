@@ -1,0 +1,6 @@
+{
+  "name": "RogueByte Stego Pro",
+  "description": "Cross-platform C++20 steganography and digital-forensics suite with lossless & coefficient backends, AEAD cryptography, and forensic inspection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

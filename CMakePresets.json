@@ -1,0 +1,77 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "linux-x64-release",
+      "displayName": "Linux x86_64 / Kali Linux (Release)",
+      "description": "Optimized release build for Linux distributions with GCC or Clang",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/linux-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_STANDARD": "20",
+        "CMAKE_CXX_FLAGS_RELEASE": "-O3 -DNDEBUG"
+      }
+    },
+    {
+      "name": "linux-x64-debug",
+      "displayName": "Linux x86_64 / Kali Linux (Debug)",
+      "description": "Debug build with ASan / UBSan instrumentation",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/linux-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_STANDARD": "20",
+        "CMAKE_CXX_FLAGS_DEBUG": "-g -O0 -fsanitize=address,undefined"
+      }
+    },
+    {
+      "name": "termux-clang-release",
+      "displayName": "Android Termux (Clang Release)",
+      "description": "Optimized release build for Android Termux environment",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/termux-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_STANDARD": "20",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "CMAKE_C_COMPILER": "clang"
+      }
+    },
+    {
+      "name": "windows-x64-release",
+      "displayName": "Windows 10/11 x64 (MSVC Release)",
+      "description": "Release build for Windows with Visual Studio 2022 or Build Tools",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build/windows-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "linux-x64-release",
+      "configurePreset": "linux-x64-release"
+    },
+    {
+      "name": "termux-clang-release",
+      "configurePreset": "termux-clang-release"
+    },
+    {
+      "name": "windows-x64-release",
+      "configurePreset": "windows-x64-release",
+      "configuration": "Release"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "linux-x64-release",
+      "configurePreset": "linux-x64-release",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}
